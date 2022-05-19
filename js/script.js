@@ -30,18 +30,17 @@ function onButtonClick() {
   }
   if (integerOne != 0 && integerTwo > 0) {
     for (count = 0; integerOne >= integerTwo; count++) {
-      // Calculation for + or - integers divided by + integers
+      // Calculation for + integers divided by + integers
       integerOne = integerOne - integerTwo
     }
     answer = count + "r" + integerOne
     document.getElementById("answer").innerHTML = "<h5>The result of " + originalIntegerOne + " ÷ " + originalIntegerTwo + " is " + answer + "</h5>"
   } else if (integerOne != 0 && integerTwo < 0) {
-    console.log("Start Negative")
-    for (count = 0; integerOne >= integerTwo; count++) {
-      // Calculation for + or - integers divided by - integers
-      integerOne = integerOne + integerTwo
+    for (count = 0; integerOne >= -integerTwo; count++) {
+      // Calculation for + integers divided by - integers
+      integerOne = integerOne - -integerTwo
     }
-    answer = -count + "r" + integerOne
+    answer = -count + "r" + -integerOne
     document.getElementById("answer").innerHTML = "<h5>The result of " + originalIntegerOne + " ÷ " + originalIntegerTwo + " is " + answer + "</h5>"
   } else {
     document.getElementById("answer").innerHTML = "<h5>The result of " + originalIntegerOne + " ÷ " + originalIntegerTwo + " is undefined</h5>"
